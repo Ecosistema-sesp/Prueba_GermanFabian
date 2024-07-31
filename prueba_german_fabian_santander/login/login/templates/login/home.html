@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Bienvenido a la Página de Inicio</h1>
+    <a href="{% url 'register' %}">
+        <button>Registrarse</button>
+    </a>
+    <a href="{% url 'login' %}">
+        <button>Iniciar Sesión</button>
+    </a>
+    {% if db_status %}
+        <p>No hay conexion con la bd.</p>
+    {% else %}
+        <p>Conexion exitosa a la bd.</p>
+    {% endif %}
+</body>
+</html>
